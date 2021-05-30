@@ -423,9 +423,31 @@ h2 {
         display: grid;
         grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
         grid-template-rows: repeat( auto-fit, minmax(250px, 1fr));
-        grid-gap: 53px;
+        grid-gap: 10px;
     }
+}
+
+@media only screen and (max-width: 900px){
+    .img-small {                                /*adjusting position of image in the crop-container*/
+        height: auto;
+        width: 200px;
+        margin-top: -50px;
     }
+    
+    .img-modified {                             /*container for cropping*/
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+        position: relative;
+        
+    }
+    .img-modified span {                        /* white, transparent background for price tag-container*/
+        top: 160px;
+        width: 100%;
+        height: 40px;
+    }
+    
+}
 
 
 /*DEALS
@@ -438,14 +460,18 @@ h2 {
     grid-gap: 45px;
 }
 
-@media only screen and (max-width: 1500px){
+@media only screen and (max-width: 1000px){
     .deals {
         display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-        grid-template-rows: repeat( auto-fit, minmax(250px, 1fr));
-        grid-gap: 53px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+        grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 10px;
     }
+    #img-1 img, #img-2 img {
+        width: 400px !important;
+        height: 200px !important;
     }
+}
 
 #img-1 {
     grid-column-start: 1;

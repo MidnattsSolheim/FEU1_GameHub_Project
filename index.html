@@ -17,16 +17,29 @@
         <div id="logo">
             <img src="images/Main-logo.png" alt="game-hub-logo" id="class">
         </div>
-            <nav>
+            <nav class="nav-main">
                 <ul>
                     <li><a href="#">STORE</a></li>
                     <li><a href="#">MY PAGE</a></li>
-                    <li><a href="#">SUPPORT</a></li>
+                    <li class="support-button"><a href="#">SUPPORT</a></li>
                     <li class="nav-sign-in"><a href="#">SIGN IN</a></li>
                 </ul>
             </nav>
+
+            <nav class="nav-minimized">
+                <div class="dropdown">
+                    <button class="drop-button"></button>
+                    <div class="dropdown-content">
+                        <a href="#">MY PAGE</a>
+                        <a href="#">SUPPORT</a>
+                        <a href="#">SIGN IN</a>
+                    </div>
+                  </div>
+                
+                <a class="store-button" href="#">VISIT STORE</a>
+            </nav>
                 <div id="icon-container"> 
-                    <input type="image" name="cart-button" src="images/icon-cart.png" alt="cart-button" class="header-button" id="cart-button">
+                    <input type="image" name="cart-button" src="icons/shopping-cart-solid.svg" alt="cart-button" class="header-button" id="cart-button">
                     <button><img src="images/icon-search-black.svg" class="header-button" id="search-button"></button>
                 </div>
                 <div>
@@ -102,7 +115,6 @@
         <section>
             <h2>DEALS</h2>
             <div class="deals">
-                    
                 <a href="#" id="img-1"><img src="images/publisher-sale-1.png" alt="publisher-sale"></a>
                 <a href="#" id="img-2"><img src="images/publisher-sale-2.png" alt="publisher-sale"></a>
                 <div id="img-3" class="img-modified">

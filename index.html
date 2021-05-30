@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <div id="logo">
+            <img src="images/Main-logo.png" alt="game-hub-logo" id="class">
+        </div>
+            <nav>
+                <ul>
+                    <li><a href="#">STORE</a></li>
+                    <li><a href="#">MY PAGE</a></li>
+                    <li><a href="#">SUPPORT</a></li>
+                    <li class="nav-sign-in"><a href="#">SIGN IN</a></li>
+                </ul>
+            </nav>
+                <div id="icon-container"> 
+                    <input type="image" name="cart-button" src="images/icon-cart.png" alt="cart-button" class="header-button" id="cart-button">
+                    <button><img src="images/icon-search-black.svg" class="header-button" id="search-button"></button>
+                </div>
+                <div>
+                    <div id="icon-search-container" class="icon-search-container-gone">
+                        <button id="search-button-2"><img src="images/icon-search-black.svg"class="header-button"></button>
+                        <input type="text" placeholder="search"  id="header-search">
+                    </div>
+            </div>
+            </div>
+    </header>
+    <main>
+        <section class="slideshow-background">
+            <div id="slideshow">
+                <div id="slideshow-img-1-container" class="slideshow-img-container">
+                    <a href="#"><img src="images/GameHub_covers10.jpg" alt="" class="img" id="slideshow-img-1"></a>
+                </div>
+                <div id="slideshow-img-2-container" class="slideshow-img-container">
+                    <a href="#"><img src="images/GameHub_covers6.jpg" alt="" class="img" id="slideshow-img-2"></a>
+                </div>
+                <div id="slideshow-img-3-container" class = "slideshow-img-container">
+                    <a href="#"><img src="images/GameHub_covers2.jpg" alt="" class="img" id="slideshow-img-3"></a>
+                </div>
+            </div>
+            <div class=slideshow-buttons>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
+        </section>  
+        <section>
+            <h2>Trending</h2>
+                <div class="trending-content">
+                    <div class="img-modified">
+                        <span>
+                            <p class="price-tag-regular">kr 199.00</p>
+                            <input class="cart-blue" type="image" src="icons/shopping-cart-solid.svg">
+                        </span>
+                        <a href="#">
+                             <img src="images/GameHub_covers10.jpg" alt="trending-img" class="img-small" id="trend-img-1">
+                        </a>
+                    </div>
+                    <div class="img-modified">
+                        <span>
+                            <p class="price-tag-regular">kr 199.00</p>
+                            <input class="cart-blue" type="image" src="icons/shopping-cart-solid.svg">
+                        </span>
+                        <a href="#">
+                            <img src="images/GameHub_covers6.jpg" alt="trending-img" class="img-small" id="trend-img-2">
+                        </a>
+                    </div>
+                    <div class="img-modified">
+                        <span>
+                            <p class="price-tag-regular">kr 199.00</p>
+                            <input class="cart-blue" type="image" src="icons/shopping-cart-solid.svg">
+                        </span>
+                        <a href="#">
+                            <img src="images/GameHub_covers9.jpg" alt="trending-img" class="img-small" id="trend-img-3">
+                        </a>
+                    </div>
+                    <div class="img-modified">
+                        <span>
+                            <p class="price-tag-regular">kr 199.00</p>
+                            <input class="cart-blue" type="image" src="icons/shopping-cart-solid.svg">
+                        </span>
+                        <a href="#">
+                            <img src="images/GameHub_covers8.jpg" alt="trending-img" class="img-small"id="trend-img-4">
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+        
+        <section>
+            <h2>DEALS</h2>
+            <div class="deals">
+                    
+                <a href="#" id="img-1"><img src="images/publisher-sale-1.png" alt="publisher-sale"></a>
+                <a href="#" id="img-2"><img src="images/publisher-sale-2.png" alt="publisher-sale"></a>
+                <div id="img-3" class="img-modified">
+                    <span>
+                        <p class="price-tag-sale">kr 99.00</p>
+                        <p class="before-price">kr 199.00</p>
+                        <input class="cart-orange" type="image" src="icons/shopping-cart-solid.svg">
+                    </span>
+                    <a href="#"><img src="images/GameHub_covers4.jpg" alt="publisher-sale" class="img-small">
+                       <p class="sale-percent">-50%</p></a>
+                </div>
+                <div id="img-4" class="img-modified">
+                    <span>
+                        <p class="price-tag-sale">kr 99.00</p>
+                        <p class="before-price">kr 199.00</p>
+                        <input class="cart-orange" type="image" src="icons/shopping-cart-solid.svg">
+                    </span>
+                    <a href="#"><img src="images/GameHub_covers5.jpg" alt="publisher-sale" class="img-small">
+                        <p class="sale-percent">-50%</p></a>
+                </div>
+                <div id="img-5" class="img-modified">
+                    <span>
+                        <p class="price-tag-sale">kr 99.00</p>
+                        <p class="before-price">kr 199.00</p>
+                        <input class="cart-orange" type="image" src="icons/shopping-cart-solid.svg">
+                    </span>
+                    <a href=""><img src="images/GameHub_covers7.jpg" alt="publisher-sale" class="img-small">
+                        <p class="sale-percent">-50%</p></a>
+                </div>
+                <div id="img-6" class="img-modified">
+                    <span>
+                        <p class="price-tag-sale">kr 99.00</p>
+                        <p class="before-price">kr 199.00</p>
+                        <input class="cart-orange" type="image" src="icons/shopping-cart-solid.svg">
+                    </span>
+                        <a href="#"><img src="images/GameHub_covers9.jpg" alt="publisher-sale" class="img-small">
+                            <p class="sale-percent">-50%</p></a>
+                </div>
+            </div>
+        </section>
+        
+            <section>
+                <h2>SUPER SALE!</h2>
+                <div class="super-sale">
+                     <input type="image" name="pre-owned" src="images/super-sale-tag.png" alt="pre-owned-tag" class="pre-owned-tag">
+                </div>
+            </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>© Game Hub AS. All rights reserved. All trademarks and registered trademarks are the property of their respective owners.</p>
+            <img src="images/Main-logo.png" alt="game-hub-logo" class="logo">
+        </div>
+    </footer>
+</body>
+<script src="js/js.js"></script>
+</html>

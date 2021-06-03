@@ -1,5 +1,5 @@
 :root {
-    --main-orange: #F08018;
+    --main-orange: #e67226;
     --main-dark-blue: #0082A3;
     --main-light-blue: #18C3F0;
 }
@@ -19,7 +19,7 @@ body {
 -----------------------------------------------------------------*/
 
 header {
-    background-image: linear-gradient(#F08018, white);
+    background-image: linear-gradient(#585858, white 80%);
     display: flex;
     justify-content: center;
     width: 100%;
@@ -37,7 +37,6 @@ header {
 
 li{
     display: inline;
-    margin-right: 145px;
 }
 
 .nav-sign-in {
@@ -47,38 +46,27 @@ li{
 .nav-main {
     margin: auto;
     position: relative;
+    
 }
 
 .nav-main li a {
     text-decoration: none;
-    color: white;
-    font-weight: 900;
-    font-size: 25px;
+    color: black;
+    font-weight: 500;
+    font-size: 40px;
+    padding: 22px;
+    font-family: 'Abolition';
 }
 
 .nav-main li a:hover {
-    text-shadow: 0 0 3px white;
+     color: white;
+     background: var(--main-orange);
 }
 .header-mobile {
     display: none;
 }
 
-@media only screen and (max-width: 1500px){
 
-    header nav ul li{
-        display: inline;
-        margin: 5px;
-        padding: 15px;
-        border-radius: 10px;
-    }
-
-    header ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-}
 /*resizing header*/
 @media only screen and (max-width: 1100px){
     .header-mobile {
@@ -118,9 +106,18 @@ li{
 }
 
 #cart-button {
-    height: 50px;
+    height: auto;
     width: 50px;
+}
+#cart-button:hover {
+    box-shadow: grey;
     filter: invert(100%) sepia(3%) saturate(7419%) hue-rotate(43deg) brightness(111%) contrast(116%); /*change to White*/
+    -moz-transform: rotate(-4deg);
+	-webkit-transform: rotate(-4deg);
+	-o-transform: rotate(-4deg);
+	-ms-transform: rotate(-4deg);
+	transform: rotate(-4deg);
+
 }
 
 
@@ -137,7 +134,7 @@ button {
    cursor: pointer;
 }
 
-#search-button {
+#search-button:hover {
     filter: invert(100%) sepia(3%) saturate(7419%) hue-rotate(43deg) brightness(111%) contrast(116%); /*change to White*/
 }
 #search-button-2 {
@@ -153,7 +150,7 @@ button {
 
  #header-search {                                   /*Shaping the search field*/
     height: 60px;
-    border-radius: 50px;
+    border-radius: 20px;
     border: 3px solid var(--main-orange);
     padding-left: 20px;
     font-size: 18px;
@@ -626,6 +623,7 @@ h2 {
         display: none;
     }
     .footer-mobile {
+        background-image: linear-gradient(white, #585858 80%);
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -650,21 +648,21 @@ h2 {
 
     .footer-buttons {
         text-decoration: none;
-        font-size:calc(10px + 1vw);
+        font-size:calc(20px + 1vw);
         font-weight: 500;
-        color: white;
-        background: var(--main-orange);
-        padding: 1.5vw 10px;
         border-radius: 2px;
         margin: 0px;
         
     }
 
 .footer-buttons a{
-    color: white;
+    padding: 1.5vw 10px;
+    font-family: 'Abolition';
+    color: black;
     text-decoration: none;
 }
-.footer-buttons:hover {
-    background: #c5c5c5;
+.footer-buttons a:hover {
+    color: white;
+    background: var(--main-orange);
 }
 }

@@ -1,8 +1,8 @@
-@import "variables.css";
+@import "imports/variables.css";
 
 
 * {
-    font-family: var(--main-text);
+    font-family: var(--main-text), sans-serif, Helvetica;
     color: #6B6B6B;
 }
 
@@ -21,7 +21,7 @@ main {
 h2 {   
     color: var(--main-dark-blue);
     margin: 50px 10px 20px 0px;;
-    font-size:calc(18px + 1vw);
+    font-size:calc(16px + 0.8vw);
 }
 
 #deals-h2 {
@@ -101,7 +101,7 @@ h2 {
   
   
   .slideshow-buttons > * {
-    background-color: var(--main-green);
+    background-color: var(--main-light-blue);
     width: 4vw;
     height: 1.5vw;
     border-radius: 10px;
@@ -119,123 +119,6 @@ h2 {
   left: auto;
   }
 
-/* Small images - resize, crop, adding cart-icon and price-tag 
------------------------------------------------------------------------------------------------*/
-.img-small {                                /*adjusting position of image in the crop-container*/
-    height: auto;
-    width: 338px;
-    margin-top: -50px;
-}
-
-.img-modified {                             /*container for cropping*/
-    height: 338px;
-    width: 334px;
-    overflow: hidden;
-    position: relative;
-    margin: auto;
-}
-
-.img-modified:hover {                       /*slight heighlight when hovering over images*/
-    background-color: white;
-    opacity: 0.8;
-}
-
-.img-modified span {                        /* white, transparent background for price tag-container*/
-    display: flex;
-    align-items: center;
-    position: absolute;
-    justify-content: space-between;
-    bottom: 0;
-    background-color: white;
-    opacity: 0.8;
-    width: 100%;
-    height: 40px;
-}
-
-.price-tag-regular, .price-tag-sale {       /*amount number for price-tag*/
-    margin-left: 10px;
-    font-size: 25px;
-    font-weight: 500;
-}
-
-.price-tag-regular {
-    color: var(--main-dark-blue)
-}
-
-.price-tag-sale {
-    color: var(--main-orange)
-}
-
-.before-price {
-    text-decoration: line-through;
-    text-decoration-thickness: 3px;
-    font-weight: 500;
-    font-size: 20px;
-    position: relative;
-    right: 40px;
-    bottom: 5px;
-}
-.sale-percent{
-    color: var(--main-orange);
-    font-size: 60px;
-    font-weight: 600;
-    position: relative;
-    top: -450px;
-    float: right;
-    float: top;
-    text-shadow: 0 0 10px white;
-}
-
-
-
-.price-tag-regular, .price-tag-sale {       /*amount number for price-tag*/
-    margin-left: 10px;
-    font-size: 25px;
-    font-weight: 500;
-}
-
-.price-tag-regular {
-    color: var(--main-dark-blue)
-}
-
-.price-tag-sale {
-    color: var(--main-orange)
-}
-
-.before-price {
-    text-decoration: line-through;
-    text-decoration-thickness: 3px;
-    font-weight: 500;
-    font-size: 20px;
-    position: relative;
-    right: 40px;
-    bottom: 5px;
-}
-.sale-percent{
-    color: var(--main-orange);
-    font-size: 60px;
-    font-weight: 600;
-    position: relative;
-    top: -450px;
-    float: right;
-    float: top;
-    text-shadow: 0 0 10px white;
-}
-
-.cart-blue, .cart-orange {                  /*size of shopping cart in the price-tag*/
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
-}
-.cart-blue {
-    filter: invert(23%) sepia(100%) saturate(2159%) hue-rotate(173deg) brightness(100%) contrast(101%); /*change to dark blue #0082A3*/
-}
-
-.cart-orange {
-    filter: invert(62%) sepia(29%) saturate(5205%) hue-rotate(352deg) brightness(97%) contrast(93%); /*change to main orange #F08018*/
-}
-
-
 /*TRENDING
 -----------------------------------------------------------------*/
 
@@ -245,109 +128,8 @@ h2 {
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
     grid-column-gap: 1.2vw;
     grid-row-gap: 4vw;
-   
 }
 
-@media only screen and (max-width: 1000px){
-    .trending-content {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
-        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
-    }
-    
-    .img-small {                                /*adjusting position of image in the crop-container*/
-        height: 40vw;
-        min-height: 300px;
-        width: 35vw;
-        min-width: 250px;
-        margin-top: -5vw;
-        z-index: 1;
-    }
-    
-    .img-modified {                             /*container for cropping*/
-        height: 34vw;
-        min-height: 240px;
-        width: 34vw;
-        min-width: 240px;
-    }
-    
-    .img-modified:hover {                       /*slight heighlight when hovering over images*/
-        background-color: white;
-        opacity: 0.8;
-    }
-    
-    .img-modified span {                        /* white, transparent background for price tag-container*/
-        width: 34vw;
-        min-width: 240px;
-        height: 4vw;
-        min-height: 28px;
-        position: absolute;
-        bottom: 0;
-    }
-    .price-tag-regular, .price-tag-sale {       /*amount number for price-tag*/
-        margin-left: 1vw;
-        font-size:calc(12px + 1.3vw);
-        font-weight: 500;
-    }
-    .before-price {
-        text-decoration: line-through;
-        text-decoration-thickness: 2px;
-        font-weight: 500;
-        font-size:calc(8px + 1.3vw);
-        position: relative;
-        right: 3vw;
-        bottom: 5px;
-    }
-    .sale-percent{
-        color: var(--main-orange);
-        font-size: 60px;
-        font-weight: 600;
-        position: relative;
-        top: -450px;
-        float: right;
-        float: top;
-        text-shadow: 0 0 10px white;
-    }
-    
-}
-
-
-@media only screen and (max-width: 600px){
-    .trending-content, .deals {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-    
-    .img-small {                                /*adjusting position of image in the crop-container*/
-        height: 40vw;
-        min-height: 300px;
-        width: 35vw;
-        min-width: 250px;
-        margin-top: -5vw;
-        z-index: 1;
-    }
-    
-    .img-modified {                             /*container for cropping*/
-        height: 34vw;
-        min-height: 240px;
-        width: 34vw;
-        min-width: 240px;
-    }
-    
-    .img-modified:hover {                       /*slight heighlight when hovering over images*/
-        background-color: white;
-        opacity: 0.8;
-    }
-    
-    .img-modified span {                        /* white, transparent background for price tag-container*/
-        width: 34vw;
-        min-width: 240px;
-        height: 4vw;
-        min-height: 28px;
-        position: absolute;
-        bottom: 0;
-    }
-}
 
 /*DEALS
 ------------------------------------------------------------------*/
@@ -369,7 +151,7 @@ h2 {
 
 .publisher-sale-container {                             /*container for cropping*/
     height: 338px;
-    width: 760px;
+    width: auto;
 }
 
 @media only screen and (max-width: 1500px){

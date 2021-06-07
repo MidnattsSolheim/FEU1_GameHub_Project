@@ -1,0 +1,17 @@
+@import "imports/variables.css";
+
+
+* {
+    font-family: var(--main-text), sans-serif, Helvetica;
+    color: #6B6B6B;
+}
+
+body {
+    margin: 0px;
+}
+
+
+main {
+    max-width: 78vw;
+    margin: auto;
+}

@@ -20,8 +20,13 @@ main {
 
 h2 {   
     color: var(--main-dark-blue);
-    margin: 50px 10px 20px 0px;;
+    margin: 50px 10px 0px 0px;;
     font-size:calc(16px + 0.8vw);
+}
+@media only screen and (max-width: 900px){
+    h2 {
+        text-align: center;
+    }
 }
 
 #deals-h2 {
@@ -120,16 +125,10 @@ h2 {
   }
 
 /*TRENDING
------------------------------------------------------------------*/
+-----------------------------------------------------------------
+All the code is in the global css-file
 
-.trending-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
-    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
-    grid-column-gap: 1.2vw;
-    grid-row-gap: 4vw;
-}
-
+*/
 
 /*DEALS
 ------------------------------------------------------------------*/

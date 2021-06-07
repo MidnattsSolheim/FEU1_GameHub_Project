@@ -4,16 +4,14 @@
 /*In this stylesheet, the following sections are being styled:
 1) Header
 2) Footer
-3) Product thumbnales for index and main store
+3) Product thumbnailes for index and main store
 
 
 I also do resizing of the same sections in the same stylesheet
 */
 
-
-
 /*HEADER
------------------------------------------------------------------*/
+----------------------------------------------------------------------------------------------------------*/
 
 /*Text and styling for both header and footer*/
 .nav-links  {
@@ -35,6 +33,18 @@ header, .header-mobile {
     position: fixed;
     top: 0;
     z-index: 3;
+}
+
+/*Remove default styling of buttons in the web-and mobile header*/
+.header-button, .dropdown-button {
+    border:none;
+   background-color: transparent;
+   outline:none;
+   cursor: pointer;
+}
+
+.header-button{
+    margin-right: 35px;
 }
 
 .header-container {
@@ -72,6 +82,16 @@ li{
     display: none;
 }
 
+#header-search {                                   /*Shaping the search field*/
+    height: 60px;
+    border-radius: 20px;
+    border: 3px solid var(--main-orange);
+    padding-left: 20px;
+    font-size: 18px;
+    outline: none;
+    float: right;
+ }
+
 
 /*Activating Header for mobile version*/
 @media only screen and (max-width: 1100px){
@@ -89,11 +109,12 @@ li{
     .header-search-mobile {
         height: 40px;
         outline: none;
-        border-radius: 10px;
+        width: 50vw;
         border: 2px solid var(--main-orange);
         padding-left: 20px;
-        font-size: 15px;
+        font-size: calc(12px + 1vw);;
     }
+
     .logo-mobile {
         height: auto;
         width: 80px;
@@ -104,13 +125,6 @@ li{
     }
 }
 
-/*search and cart
---------------------------------------------------------------------*/
-
-.header-button{
-    margin-right: 35px;
-}
-
 #cart-button {
     height: auto;
     width: 50px;
@@ -118,7 +132,7 @@ li{
 
 /*Invert color of all buttons on hover*/
 
-#cart-button:hover, #search-button:hover, .drop-button:hover  {
+#cart-button:hover, #search-button:hover, .dropdown-button:hover  {
     filter: invert(100%) sepia(3%) saturate(7419%) hue-rotate(43deg) brightness(111%) contrast(116%); /*change to White*/
 }
 
@@ -131,20 +145,12 @@ li{
 	transform: rotate(-4deg);
 }
 
-
+/*Resize Search and Nav, and adding dropdown-bar*/
 @media only screen and (max-width: 1100px){
 #cart-button {
     height: 45px;
     width: 45px;
     }
-}
-
-/*Remove default styling of buttons in the web-and mobile header*/
-.header-button {
-    border:none;
-   background-color: transparent;
-   outline:none;
-   cursor: pointer;
 }
 
 #search-button-2 {
@@ -158,15 +164,6 @@ li{
     display: none;
  }
 
- #header-search {                                   /*Shaping the search field*/
-    height: 60px;
-    border-radius: 20px;
-    border: 3px solid var(--main-orange);
-    padding-left: 20px;
-    font-size: 18px;
-    outline: none;
-    float: right;
- }
  .nav-minimized {
      display: none;
  }
@@ -180,12 +177,12 @@ li{
     display: none;
 }
 
-.drop-button {
+.dropdown-button {
     background-image: url("../icons/bars-solid.svg");
-    color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
+    margin-left: 20px;
   }
   
   .dropdown {
@@ -197,9 +194,8 @@ li{
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 3;
     margin-top: 1px;
     font: 10px;
     top: 100%; 
@@ -220,14 +216,15 @@ li{
     display: block;
 }
 
-/*FOOTER*/
+/*FOOTER
+------------------------------------------------------------------------------------------------------------------*/
 
 .footer-fullsize, .footer-mobile {
     background-color: var(--main-orange);
     display: flex;
     justify-content: center;
-    margin-top: auto;
     width: 100%;
+    margin-top: 100px;;
 }
 
 .footer-fullsize > *{
@@ -258,11 +255,11 @@ li{
         position: absolute;
         bottom: 0;
         position: fixed;
-        height: 12vw;
+        height: 13vw;
         max-height: 50px;
-        }
+    }
     .logo-mobile {
-        height: 12vw;
+        height: 10vw;
         max-height: 50px;
         width: auto;
         margin-left: 0px;
@@ -279,15 +276,21 @@ li{
         font-weight: 500;
         border-radius: 2px;
         margin: 0px;
-        
     }
 
-.footer-buttons a{
-    padding: 1.5vw 10px;
-}
+    .footer-buttons a{
+        padding: 1.5vw 10px;
+    }
 }
 
-
+/*GRID FOR GAME THUMBNAILS*/
+.trending-content, .all-games-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 1.2vw;
+    grid-row-gap: 4vw;
+}
 
 /* Product Thumbnails - resize, crop, adding cart-icon and price-tag 
 -----------------------------------------------------------------------------------------------*/
@@ -364,33 +367,6 @@ li{
     font-weight: 500;
 }
 
-.price-tag-regular {
-    color: var(--main-dark-blue)
-}
-
-.price-tag-sale {
-    color: var(--main-orange)
-}
-
-.before-price {
-    text-decoration: line-through;
-    text-decoration-thickness: 3px;
-    font-weight: 500;
-    font-size: 20px;
-    position: relative;
-    right: 40px;
-    bottom: 5px;
-}
-.sale-percent{
-    color: var(--main-orange);
-    font-size: 60px;
-    font-weight: 600;
-    position: relative;
-    top: -450px;
-    float: right;
-    float: top;
-    text-shadow: 0 0 10px white;
-}
 
 .cart-blue, .cart-orange {                  /*size of shopping cart in the product thumbnail*/
     height: 30px;
@@ -465,39 +441,9 @@ li{
 
 
 @media only screen and (max-width: 600px){
-    .trending-content, .deals {
+    .trending-content, .deals, .all-games-content {
         display: flex;
         flex-direction: column;
         margin: auto;
-    }
-    
-    .img-small {                                /*adjusting position of image in the crop-container*/
-        height: 40vw;
-        min-height: 300px;
-        width: 35vw;
-        min-width: 250px;
-        margin-top: -5vw;
-        z-index: 1;
-    }
-    
-    .img-modified {                             /*container for cropping*/
-        height: 34vw;
-        min-height: 240px;
-        width: 34vw;
-        min-width: 240px;
-    }
-    
-    .img-modified:hover {                       /*slight heighlight when hovering over images*/
-        background-color: white;
-        opacity: 0.8;
-    }
-    
-    .img-modified span {                        /* white, transparent background for price tag-container*/
-        width: 34vw;
-        min-width: 240px;
-        height: 4vw;
-        min-height: 28px;
-        position: absolute;
-        bottom: 0;
-    }
+    }   
 }

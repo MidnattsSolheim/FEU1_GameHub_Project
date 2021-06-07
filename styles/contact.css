@@ -1,0 +1,83 @@
+@import "imports/variables.css";
+
+* {
+    font-family: var(--main-text), sans-serif, Helvetica;
+    color: #6B6B6B;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+
+main {
+    max-width: 78vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+label {
+    margin-bottom: 10px;;
+}
+
+#form-container {
+    margin-top: 3vw;
+    margin-top: calc(100px + 5vw);
+    width: 100%;
+    max-width: 400px;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;       
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+select, textarea, form input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    -webkit-box-shadow: none ; 
+    box-shadow: none;
+    resize: none;
+    padding: 5px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+
+form input {
+    background-color: var(--main-dark-blue);
+    border:none;
+    outline:none;
+    color: white;
+    font-weight: 700;
+    font-size: calc(15px + 0.5vw);
+    border-radius: 50px;
+    height: 3vw;
+    min-height: 40px;
+}
+
+form input:hover {
+    background-color: var(--main-light-blue);
+
+}
+
+select, form input {
+    cursor: pointer;
+}
+
+.footer-fullsize {
+    position: absolute;
+    bottom: 0;
+}

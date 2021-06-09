@@ -1,0 +1,15 @@
+@import "imports/variables.css";
+
+.footer-fullsize {
+    position: absolute;
+    bottom: 0;
+}
+
+/*overriding the margin-bottom 100px set in the generic-form-styling*/
+.confirm-button {
+    margin-bottom: 10px !important;
+}
+
+.form-container > *{
+    text-decoration: none;
+}

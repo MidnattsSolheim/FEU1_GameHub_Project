@@ -1,0 +1,106 @@
+@import "imports/variables.css";
+
+/*overriding global class styles*/
+
+* {
+    font-family: var(--main-text), sans-serif, Helvetica;
+    color: var(--main-dark-blue);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+h1 {
+    font-size:calc(15px + 1.3vw);
+    margin-bottom: calc(20px + 2vw);;
+}
+
+.container button {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    background-color: var(--main-dark-blue);
+    border:none;
+    outline:none;
+    color: white;
+    font-weight: 700;
+    font-size: calc(12px + 0.5vw);
+    border-radius: 50px;
+    height: 3vw;
+    min-height: 40px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.continue-button {
+    margin-top: calc(12px + 0.8vw) !important;
+    margin-bottom: 15vw;
+    background-color: var(--main-orange) !important;
+}
+
+.container button:hover, .continue-button:hover {
+    background-color: lightgray !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:after {
+    text-decoration: none;
+}
+
+.img-small {                                /*adjusting position of image in the crop-container*/
+    height: auto;
+    width: 150px;
+    margin-top: -20px;
+}
+
+.img-modified {                             /*container for cropping*/
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+.container {
+    margin-top: 100px;
+    display: block;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding-right: 2vw;
+}
+
+@media only screen and (max-width: 1000px){
+    /*overriding global style*/
+    .img-small {                                /*adjusting position of image in the crop-container*/
+        height: auto;
+        width: 20vw ;
+        max-width: 150px;
+        max-height: 180px;
+        min-height: 100px;
+        min-width: 100px;
+        margin-top: -20px ;
+    }
+    
+    .img-modified {                             /*container for cropping*/
+        height: 20vw ;
+        width: 20vw ;
+        max-width: 150px;
+        max-height: 150px;
+        min-height: 100px; 
+        min-width: 100px;
+        display: inline-block ;
+    }
+}

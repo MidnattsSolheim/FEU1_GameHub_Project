@@ -1,0 +1,80 @@
+@import "imports/variables.css";
+
+* {
+    font-family: var(--main-text), sans-serif, Helvetica;
+    color: var(--main-dark-blue);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    max-width: 78vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+h1, label {
+    color: var(--main-dark-blue)
+}
+h1 {
+    margin-bottom: 35px;
+}
+
+form input {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: solid lightgray 1px;
+    -webkit-box-shadow: 2px 2px 13px -3px #a7a7a7; 
+    box-shadow: 2px 2px 13px -3px #a7a7a7;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;;
+}
+
+#form-container {
+    margin-top: 3vw;
+    margin-top: calc(100px + 5vw);
+    width: 100%;
+    max-width: 400px;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;       
+}
+
+@media only screen and (max-height: 400px){
+    #form-container {
+        margin-top: 40px;
+    }
+}
+
+.confirm-button {
+    background-color: var(--main-orange);
+    border:none;
+    outline:none;
+    color: white;
+    font-weight: 700;
+    font-size: calc(15px + 0.5vw);
+    border-radius: 50px;
+    height: 3vw;
+    min-height: 40px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.confirm-button:hover {
+    background-color: lightgray;
+}

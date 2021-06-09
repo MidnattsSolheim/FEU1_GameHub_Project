@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us</title>
+    <title>Shopping cart</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/rrb5lci.css">
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/contact.css">
-    <link rel="stylesheet" href="../styles/generic-form-styling.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/shopping-cart.css">
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <header>
@@ -50,24 +50,37 @@
                 </div>
     </nav>
     <input type="text" placeholder="Search for games"  class="header-search-mobile">
-    <input type="image" name="cart-button" src="icons/shopping-cart-solid.svg" alt="cart-button" class="header-button" id="cart-button">
+    <a href="shopping-cart.html"><img src="icons/shopping-cart-solid.svg" alt="cart-button" class="header-button" id="cart-button"></a>
 </div>
 </header>
 <main>
-    <div id=form-container>
-        <h1>Contact us</h1>
-        <form action="/index.html" id="contact-form">
-                <label for="subject">Select subject</label>
-                <select name="subject" id="subject">
-                    <option value="1">Product related</option>
-                    <option value="2">Financial questions</option>
-                    <option value="3">Technical issues</option>
-                    <option value="4">Other</option>
-                </select>
-            <label for="your-text">Your text:</label><textarea name="your-text" id="your-text" rows="6" cols="5" required></textarea>
-            <input type="submit" value= SEND class=confirm-button>
-        </form>
-    </div>
+    <div class=container>
+        <h1>Shopping cart</h1>
+            <table>
+                <tr>
+                    <td><a href="#" class="img-modified"><img src="images/GameHub_covers.jpg" alt="gamehub-cover-1" class="img-small"></a></td>
+                    <td> Ping Pong</td>
+                    <td>kr 199</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="img-modified"><img src="images/GameHub_covers2.jpg" alt="gamehub-cover-1" class="img-small"></a></td>
+                    <td>Super Duper</td>
+                    <td>kr 199</td>
+                </tr>
+                <tr>
+                    <td><a href="#" class="img-modified"><img src="images/GameHub_covers3.jpg" alt="gamehub-cover-3" class="img-small"></a></td>
+                    <td>BLACK</td>
+                    <td>kr 199</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><strong>Total:</strong></td>
+                    <td><strong>kr 597</strong></td>
+                </tr>
+            </table>
+            <a href="checkout.html"><button>PROCEED TO CHECKOUT</button></a>
+            <a href="store.html"><button class="continue-button">CONTINUE SHOPPING</button></a>
+    </div> 
 </main>
 <footer class = footer-fullsize>
     <div>

@@ -1,0 +1,140 @@
+@import "imports/variables.css";
+
+
+main {
+    max-width: 78vw;
+    margin: auto;
+}
+
+.main-container {
+   margin-top: calc(50px + 4vw);;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1px;
+}
+
+/*gamehub wallet*/
+.left-container div > *{
+    display: inline-flex;
+    margin-right: 50px;
+    color: var(--main-orange);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.right-container label,  #check-all {
+    margin-top: 50px;
+    margin-right: 40px;
+}
+
+.left-container button {
+    border:none;
+    outline:none;
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.left-container button:hover {
+    text-decoration: underline;
+}
+
+.checkbox-thumbnail, #check-all {
+    height: 20px;
+    width: 20px;
+    border: solid white;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.img-small {                                /*adjusting position of image in the crop-container*/
+    height: auto;
+    width: 150px;
+    margin-top: -20px;
+}
+
+.img-modified {                             /*container for cropping*/
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+
+.background-thumb{
+    height: 25px;
+}
+
+.img-modified {                             /*container for cropping*/
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+
+.img-modified p {
+    font-size: 15px; 
+}
+
+.img-modified span {
+    height: 25px;
+}
+
+@media only screen and (max-width: 1000px){
+
+    .main-container {
+        display: block;
+     }
+
+    /*overriding global style*/
+    .img-small {                                /*adjusting position of image in the crop-container*/
+        height: auto;
+        width: 20vw ;
+        max-width: 150px;
+        max-height: 180px;
+        min-height: 100px;
+        min-width: 100px;
+        margin-top: -20px ;
+    }
+    
+    .img-modified {                             /*container for cropping*/
+        height: 20vw ;
+        width: 20vw ;
+        max-width: 150px;
+        max-height: 150px;
+        min-height: 100px; 
+        min-width: 100px;
+    }
+
+    .left-container div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:var(--main-dark-blue);
+        color: white;
+        height: 50px;
+    }
+
+    .left-container button {
+        color: black;
+        width: 100%;
+        border:none;
+        outline:none;
+        background-color:transparent;
+        -webkit-box-shadow: 2px 2px 13px -3px #a7a7a7; 
+        box-shadow: 2px 2px 13px -3px #a7a7a7;
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        margin-bottom: 0px;
+        font-size: 18px;
+    }
+    
+    .left-container button:hover {
+        color: white;
+        background-color:var(--main-orange);
+}
+}
+
+.footer-fullsize {
+    position: absolute;
+    bottom: 0;
+}

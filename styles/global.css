@@ -2,13 +2,27 @@
 @import url("https://use.typekit.net/rrb5lci.css");
 
 /*In this stylesheet, the following sections are being styled:
-1) Header
-2) Footer
-3) Product thumbnailes for index and main store
+1) General styling
+2) Header
+3) Footer
+4) Product thumbnailes for index and main store
 
-
-I also do resizing of the same sections in the same stylesheet
+I also do resizing (@media) of the same sections in the same stylesheet
 */
+
+body {   /*Same for all pages*/
+    margin: 0px;
+}
+
+h1, h2, h3, h4 {      /*setting font weight for all headers*/
+    font-weight: 500;
+}
+
+* {
+    font-family: var(--main-text), sans-serif, Helvetica;
+    color: var(--main-dark-blue);
+}
+
 
 /*HEADER
 ----------------------------------------------------------------------------------------------------------*/
@@ -64,8 +78,7 @@ li{
 
 .nav-main {
     margin: auto;
-    position: relative;
-    
+    position: relative; 
 }
 
 .nav-main li a {
@@ -319,20 +332,28 @@ li{
     position: absolute;
     justify-content: space-between;
     bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.background-thumb {
+    position: absolute;
     background-color: white;
     opacity: 0.8;
     width: 100%;
     height: 40px;
+    bottom: 0;
 }
 
 .price-tag-regular, .price-tag-sale {       /*amount number for price-tag*/
     margin-left: 10px;
     font-size: 25px;
     font-weight: 500;
+    opacity: 1;
 }
 
 .price-tag-regular {
-    color: var(--main-dark-blue)
+    color: var(--main-dark-blue);
 }
 
 .price-tag-sale {

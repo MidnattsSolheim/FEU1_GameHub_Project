@@ -1,0 +1,77 @@
+/*most of the styling is inherited from "generic-form-styling.css. 
+Doing minor adjustments within this stylesheet and overriding some inherited stylings which does not totally fit*/
+
+
+@import "imports/variables.css";
+
+form li{
+    display: block;
+    color: var(--main-dark-gray)
+}
+form ul {
+    padding-left: 0px;
+}
+
+h4 {
+    color: var(--main-orange);
+    margin-bottom: 0px;
+}
+
+select {
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border: solid lightgray 1.5px;
+    box-shadow: 2px 2px 13px -3px #a7a7a7;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+#cancel-button {
+    border:none;
+    outline:none;
+    background-color: transparent;
+    font-size: calc(15px + 0.5vw);
+    font-weight: 700;
+    position: relative;
+    left: 37%;
+    cursor: pointer;
+}
+
+#cancel-button:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+/*Overriding margin-bottom 100px*/
+.confirm-button {
+    margin-bottom: 20px;
+}
+/*making the cardnumber and CVC input on one line*/
+#form-container div { 
+    display: inline-flex;
+}
+
+#form-container div input { 
+    color: var(--main-dark-gray);
+    font-size: 15px;
+    padding: 7px;
+    margin-right: 10px;
+}
+
+#cvc-label {
+    position: relative;
+    left: 140px;
+}
+
+#year-label {
+    position: relative;
+    left: 40px;
+}
+
+#cvc {
+    margin-left: 50px;
+}
+
+

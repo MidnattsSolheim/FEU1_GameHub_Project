@@ -1,0 +1,5 @@
+/*re-using styling from shopping cart as the layout is more or less the same*/
+
+h1, strong {
+    color: var(--main-orange)
+}

@@ -1,3 +1,11 @@
+/*  This stylesheet is used to style the following pages:
+    1) contact.html
+    2) signin.html
+    3) signup.html
+    4) checkout.html
+    5) order-overview.html
+*/
+
 @import "imports/variables.css";
 
 * {
@@ -5,10 +13,6 @@
     color: var(--main-dark-blue);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-}
-
-body {
-    margin: 0px;
 }
 
 main {
@@ -23,6 +27,15 @@ h1, label {
 }
 h1 {
     margin-bottom: 35px;
+    font-size:calc(15px + 1.3vw);
+}
+
+h2 {
+    font-size:calc(9px + 1vw);
+}
+
+h3 {
+    font-size:calc(8px + 1vw);
 }
 
 form input {
@@ -30,7 +43,7 @@ form input {
     margin-bottom: 20px;
     font-size: 20px;
     border-radius: 5px;
-    border: solid lightgray 1px;
+    border: solid lightgray 1.5px;
     -webkit-box-shadow: 2px 2px 13px -3px #a7a7a7; 
     box-shadow: 2px 2px 13px -3px #a7a7a7;
 }
@@ -45,8 +58,7 @@ label {
 }
 
 #form-container {
-    margin-top: 3vw;
-    margin-top: calc(100px + 5vw);
+    margin-top: calc(40px + 4vw);
     width: 100%;
     max-width: 400px;
     -webkit-box-sizing: border-box; 
@@ -73,6 +85,7 @@ label {
     cursor: pointer;
     margin-top: 30px;
     margin-bottom: 100px;
+    width: 100%;
 }
 
 .confirm-button:hover {

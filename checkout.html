@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping cart</title>
+    <title>Checkout</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/rrb5lci.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/shopping-cart.css">
+    <link rel="stylesheet" href="../styles/generic-form-styling.css">
+    <link rel="stylesheet" href="../styles/checkout.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <header>
@@ -53,32 +54,49 @@
 </div>
 </header>
 <main>
-    <div class=container>
-        <h1>Shopping cart</h1>
-            <table>
-                <tr>
-                    <td><a href="products/pingpong.html" class="img-modified"><img src="images/GameHub_covers.jpg" alt="gamehub-cover-1" class="img-small"></a></td>
-                    <td> Ping Pong</td>
-                    <td>kr 199</td>
-                </tr>
-                <tr>
-                    <td><a href="products/superduper.html" class="img-modified"><img src="images/GameHub_covers2.jpg" alt="gamehub-cover-1" class="img-small"></a></td>
-                    <td>Super Duper</td>
-                    <td>kr 199</td>
-                </tr>
-                <tr>
-                    <td><a href="products/black.html" class="img-modified"><img src="images/GameHub_covers3.jpg" alt="gamehub-cover-3" class="img-small"></a></td>
-                    <td>BLACK</td>
-                    <td>kr 199</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><strong>Total:</strong></td>
-                    <td><strong>kr 597</strong></td>
-                </tr>
-            </table>
-            <a href="checkout.html"><button>PROCEED TO CHECKOUT</button></a>
-            <a href="store.html"><button class="continue-button">CONTINUE SHOPPING</button></a>
+    <div id=form-container>
+        <h1>Checkout</h1>
+        <form action="order-overview.html" class="payment-type-container">
+            <h3>Customer information</h3>
+            <h4>From user account:</h4>
+           <ul>
+                <li>Steve Stevenson</li>
+                <li>Whip-ma-whop-ma Gate</li>
+                <li> YO1 5KO</li>
+                <li>York, UK</li>
+           </ul>
+                <label for="payment-options">Payment type</label>
+                <select name="payment-options" id="payment-options">
+                    <option value="1">VISA</option>
+                    <option value="2">Mastercard</option>
+                    <option value="3">Paypal</option>
+                </select>
+                <div>
+                    <label for="card-number">Card number</label>
+                </div>
+                <div>
+                    <input type="text" id="card-number" maxlength = "16" required>
+
+                </div>
+                <div>
+                    <label for="expiry-date">Expiry date</label>
+                    <label id="cvc-label" for="cvc">CVC</label>
+                </div>
+                <div>
+                    <div id="expiry-date">
+                        <input type="number" min="1" max="31" id="month" value="1">
+                        <input type="number" min="2020" max="2040" id="year" value="2020">
+                    </div>  
+                    <input type="text" id="cvc" maxlength = "3" required>
+                </div>
+                <div>
+                    <label for="month">Month</label>
+                    <label id="year-label" for="year">Year</label>
+                </div>
+
+            <input type="submit" class="confirm-button" value="PAY">           
+        </form>
+        <a href="shopping-cart.html"><button id="cancel-button">CANCEL</button></a>
     </div> 
 </main>
 <footer class = footer-fullsize>

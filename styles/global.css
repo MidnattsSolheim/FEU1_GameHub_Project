@@ -238,6 +238,7 @@ li{
     justify-content: center;
     width: 100%;
     margin-top: 100px;;
+    z-index: 3;
 }
 
 .footer-fullsize > *{
@@ -460,11 +461,30 @@ li{
     
 }
 
-
 @media only screen and (max-width: 600px){
     .trending-content, .deals, .all-games-content {
         display: flex;
         flex-direction: column;
         margin: auto;
     }   
+}
+
+.generic-button {
+    background-color: var(--main-orange);
+    border:none;
+    outline:none;
+    color: white;
+    font-weight: 700;
+    font-size: calc(8px + 1vw);
+    border-radius: 50px;
+    height: 3vw;
+    min-height: 40px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.generic-button:hover {
+    background-color: lightgray;
 }

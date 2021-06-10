@@ -1,0 +1,133 @@
+@import "imports/variables.css";
+
+* {
+    color: var(--main-dark-gray)
+}
+
+header, .header-mobile {
+    opacity: 0.96;
+}
+
+main {
+    max-width: 78vw;
+    margin: auto;
+}
+
+.header-image {  /*container for cropping*/
+    margin-top: calc(40px + 4vw);
+    margin-top: 1.5vw;
+    overflow: hidden;
+    width: 100%;
+    height: 15vw;
+}
+
+.header-image img {
+    width: 100%;
+    height: auto;
+    margin-top: -40vw;
+}
+
+/*container for the 50/50 grid. Adjusting position of image and text as center makes it sqewed*/
+.container-of-all-containers { 
+    margin-top: 3vw;
+    max-width: 60vw;
+    position: relative;
+    left: 18%;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.left-container img {
+    height: auto;
+    width: 70%;
+    float: right; /*float right in grid container and adjust with margin*/
+    margin-right: 2vw;
+}
+
+.rating img { /*star-rating: color and size*/
+    width: auto;
+    height: 20px;
+    filter: invert(62%) sepia(29%) saturate(5205%) hue-rotate(352deg) brightness(97%) contrast(93%); /*change to main orange #F08018*/
+}
+
+.rating button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.game-price {
+    font-size: 50px;
+    font-weight: 600;
+}
+/*rest of code in global.css*/
+.generic-button {
+    width: 50%;
+    min-width: 150px;
+}
+
+@media only screen and (max-width: 900px){
+    main {
+        display: flex;
+        justify-content: center;
+    }
+    .header-image {  /*container for cropping*/
+        margin-top: calc(40px + 4vw);
+        margin-top: 0px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        filter: blur(4px);
+    }
+    .container-of-all-containers { 
+        max-width: 60vw;
+        position: absolute;
+        top: 0px;
+        right: 50px;
+        z-index: 2;
+    }
+    .main-container, .main-container > * {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container > * {
+        margin-right: 10px;
+    }
+    .left-container img {
+        height: auto;
+        width: 100%;
+        float: right; /*float right in grid container and adjust with margin*/
+        margin-right: 2vw;
+    }
+    .game-price {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    } 
+    .rating img { /*star-rating: color and size*/
+        width: auto;
+        height: 15px;
+    }
+    .generic-button {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .game-details{
+        font-size: 12px;
+    }
+    h1 {
+        margin-bottom: 5px;
+    }
+    .generic-button {
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 50px;
+        z-index: 3;   
+    }
+}

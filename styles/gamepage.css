@@ -87,8 +87,8 @@ main {
     .container-of-all-containers { 
         max-width: 60vw;
         position: absolute;
-        top: 0px;
-        right: 50px;
+        top: 17vw;
+        left: 21vw;
         z-index: 2;
     }
     .main-container, .main-container > * {
@@ -102,7 +102,6 @@ main {
     .left-container img {
         height: auto;
         width: 100%;
-        float: right; /*float right in grid container and adjust with margin*/
         margin-right: 2vw;
     }
     .game-price {
